@@ -7,6 +7,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 <style>
 
 *{
@@ -21,9 +23,17 @@ body{
 background:#0f172a;
 color:white;
 text-align:center;
+transition:0.3s;
 }
 
-/* particle background */
+/* dark light mode */
+
+.light{
+background:white;
+color:black;
+}
+
+/* particles */
 
 #particles-js{
 position:fixed;
@@ -49,14 +59,21 @@ color:white;
 margin:15px;
 text-decoration:none;
 font-size:18px;
-transition:0.3s;
 }
 
 nav a:hover{
 color:#38bdf8;
 }
 
-/* hero section */
+.toggle{
+cursor:pointer;
+padding:6px 12px;
+background:#38bdf8;
+border-radius:6px;
+color:black;
+}
+
+/* hero */
 
 #home{
 padding:120px 20px;
@@ -80,7 +97,7 @@ margin-bottom:30px;
 font-size:32px;
 }
 
-/* glass cards */
+/* cards */
 
 .card{
 background:rgba(255,255,255,0.1);
@@ -99,10 +116,6 @@ margin:15px auto;
 max-width:500px;
 }
 
-.skill p{
-margin-bottom:5px;
-}
-
 .bar{
 background:#1e293b;
 height:10px;
@@ -119,13 +132,13 @@ background:#38bdf8;
 
 .projects{
 display:flex;
-justify-content:center;
 flex-wrap:wrap;
+justify-content:center;
 gap:25px;
 }
 
 .project-card{
-width:250px;
+width:260px;
 background:rgba(255,255,255,0.1);
 border-radius:10px;
 overflow:hidden;
@@ -162,9 +175,7 @@ border-radius:5px;
 
 /* resume button */
 
-.resume-btn{
-display:inline-block;
-margin-top:20px;
+.resume{
 padding:12px 25px;
 background:#38bdf8;
 color:black;
@@ -197,10 +208,12 @@ background:black;
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
 
+<span class="toggle" onclick="mode()">Mode</span>
+
 </nav>
 
 
-<section id="home">
+<section id="home" data-aos="fade-up">
 
 <h1>Anandu G</h1>
 
@@ -210,22 +223,26 @@ background:black;
 
 <p>Sree Chitra Thirunal College of Engineering</p>
 
-<a class="resume-btn" href="#">Download Resume</a>
+<br>
+
+<a class="resume" href="#">Download Resume</a>
 
 </section>
 
 
-<section id="about">
+<section id="about" data-aos="fade-up">
 
 <h2>About Me</h2>
 
 <div class="card">
 
 <p>
-I am a Computer Science student specializing in Artificial Intelligence
-and Machine Learning. I enjoy building web applications and learning
-new technologies. My goal is to become a professional software engineer
-and AI developer.
+
+I am a Computer Science student specializing in AI and Machine Learning.
+I enjoy building web applications, learning new technologies and creating
+innovative solutions. My goal is to become a professional AI engineer
+and software developer.
+
 </p>
 
 </div>
@@ -233,54 +250,34 @@ and AI developer.
 </section>
 
 
-<section id="skills">
+<section id="skills" data-aos="fade-up">
 
 <h2>Skills</h2>
 
 <div class="skill">
-
 <p>HTML</p>
-
-<div class="bar">
-<div class="progress" style="width:90%"></div>
-</div>
-
+<div class="bar"><div class="progress" style="width:90%"></div></div>
 </div>
 
 <div class="skill">
-
 <p>CSS</p>
-
-<div class="bar">
-<div class="progress" style="width:80%"></div>
-</div>
-
+<div class="bar"><div class="progress" style="width:80%"></div></div>
 </div>
 
 <div class="skill">
-
 <p>Python</p>
-
-<div class="bar">
-<div class="progress" style="width:70%"></div>
-</div>
-
+<div class="bar"><div class="progress" style="width:75%"></div></div>
 </div>
 
 <div class="skill">
-
 <p>C Programming</p>
-
-<div class="bar">
-<div class="progress" style="width:75%"></div>
-</div>
-
+<div class="bar"><div class="progress" style="width:70%"></div></div>
 </div>
 
 </section>
 
 
-<section id="projects">
+<section id="projects" data-aos="fade-up">
 
 <h2>Projects</h2>
 
@@ -292,7 +289,7 @@ and AI developer.
 
 <h3>Netflix Clone</h3>
 
-<p>Streaming platform UI using HTML and CSS</p>
+<p>Streaming platform UI built using HTML and CSS</p>
 
 <a href="#">View</a>
 
@@ -305,7 +302,7 @@ and AI developer.
 
 <h3>Spotify Clone</h3>
 
-<p>Music player interface</p>
+<p>Music player interface design</p>
 
 <a href="#">View</a>
 
@@ -318,7 +315,7 @@ and AI developer.
 
 <h3>Amazon Clone</h3>
 
-<p>E-commerce UI design</p>
+<p>E-commerce website UI inspired by Amazon</p>
 
 <a href="#">View</a>
 
@@ -329,7 +326,7 @@ and AI developer.
 </section>
 
 
-<section id="contact">
+<section id="contact" data-aos="fade-up">
 
 <h2>Contact</h2>
 
@@ -355,13 +352,13 @@ and AI developer.
 </footer>
 
 
-<!-- typing animation -->
+<!-- typing -->
 
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 <script>
 
-var typed = new Typed("#typing",{
+new Typed("#typing",{
 
 strings:[
 "AI & ML Student",
@@ -379,7 +376,7 @@ loop:true
 </script>
 
 
-<!-- particle animation -->
+<!-- particles -->
 
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
@@ -400,13 +397,32 @@ color:"#38bdf8",
 opacity:0.4,
 width:1
 },
-move:{
-enable:true,
-speed:3
-}
+move:{enable:true,speed:3}
 }
 
 });
+
+</script>
+
+
+<!-- scroll animations -->
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+AOS.init();
+</script>
+
+
+<!-- dark mode -->
+
+<script>
+
+function mode(){
+
+document.body.classList.toggle("light");
+
+}
 
 </script>
 
