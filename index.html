@@ -1,21 +1,46 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Anandu's Portfolio</title>
+
+<title>Anandu Portfolio</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 
-body{
-font-family: Arial, sans-serif;
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+scroll-behavior:smooth;
+}
+
+body{
 background:#f4f4f4;
 text-align:center;
 }
 
-/* Navigation bar */
+/* Particle background */
+
+#particles-js{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+z-index:-1;
+background:#111;
+}
+
+/* Navigation */
 
 nav{
-background:#333;
+background:#111;
+position:sticky;
+top:0;
+z-index:1000;
 padding:15px;
 }
 
@@ -24,72 +49,139 @@ color:white;
 margin:15px;
 text-decoration:none;
 font-size:18px;
+transition:0.3s;
 }
 
 nav a:hover{
 color:#00adb5;
 }
 
+/* Home */
+
+#home{
+padding:120px 20px;
+color:white;
+}
+
+#home img{
+width:180px;
+border-radius:50%;
+margin:20px;
+border:4px solid white;
+}
+
 /* Sections */
 
 section{
-padding:50px;
-}
-
-h1,h2{
-color:#333;
-}
-
-/* Image styling */
-
-img{
-width:200px;
+padding:80px 20px;
+background:white;
+margin:30px;
 border-radius:10px;
-margin:10px;
 }
 
-/* Project layout */
+h2{
+margin-bottom:20px;
+font-size:30px;
+}
+
+/* Skills */
+
+ul{
+list-style:none;
+}
+
+ul li{
+padding:10px;
+font-size:18px;
+}
+
+/* Projects */
 
 .projects{
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
-gap:20px;
+gap:25px;
+margin-top:30px;
 }
 
 .project-card{
 background:white;
-padding:20px;
-border-radius:10px;
 width:250px;
-box-shadow:0 0 10px rgba(0,0,0,0.2);
+border-radius:12px;
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+overflow:hidden;
+transition:0.4s;
+}
+
+.project-card:hover{
+transform:translateY(-10px);
+}
+
+.project-card img{
+width:100%;
+height:150px;
+object-fit:cover;
+}
+
+.project-card h3{
+margin:10px;
+}
+
+.project-card p{
+padding:0 15px;
+}
+
+.project-card a{
+display:block;
+margin:15px;
+padding:10px;
+background:#00adb5;
+color:white;
+text-decoration:none;
+border-radius:5px;
+}
+
+.project-card a:hover{
+background:#007f85;
+}
+
+/* Contact */
+
+#contact a{
+text-decoration:none;
+color:#00adb5;
+margin:10px;
+font-size:18px;
 }
 
 /* Footer */
 
 footer{
-background:#333;
+background:#111;
 color:white;
 padding:20px;
+margin-top:40px;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<!-- Navigation -->
+<div id="particles-js"></div>
 
 <nav>
+
 <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#achievements">Achievements</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
-</nav>
 
-<!-- Home -->
+</nav>
 
 <section id="home">
 
@@ -97,61 +189,54 @@ padding:20px;
 
 <img src="profile.jpg">
 
-<p>
-Hello! I am <b>Anandu</b>, a BTech Computer Science student specializing in AI and Machine Learning.
-</p>
+<h2><span id="typing"></span></h2>
 
-<p>
-Currently studying at <b>Sree Chitra Thirunal College of Engineering</b>.
-I am passionate about programming, web development, and artificial intelligence.
-</p>
+<p>Sree Chitra Thirunal College of Engineering</p>
 
 </section>
-
-<!-- About -->
 
 <section id="about">
 
 <h2>About Me</h2>
 
 <p>
-I am a Computer Science student who enjoys building websites and learning new technologies.
-My goal is to become a skilled software developer and work in the field of Artificial Intelligence.
+I am a Computer Science student passionate about programming,
+web development and Artificial Intelligence.
+My goal is to become a skilled software developer and work
+in the field of AI and Machine Learning.
 </p>
 
 </section>
-
-<!-- Achievements -->
 
 <section id="achievements">
 
 <h2>Achievements</h2>
 
 <ul>
-<li>Completed multiple web development projects</li>
-<li>Learning Python and AI development</li>
-<li>Built and deployed a personal website using GitHub Pages</li>
+
+<li>Built and deployed a portfolio website</li>
+<li>Completed web development projects</li>
+<li>Learning Python and Artificial Intelligence</li>
+
 </ul>
 
 </section>
-
-<!-- Skills -->
 
 <section id="skills">
 
 <h2>Skills</h2>
 
 <ul>
+
 <li>HTML</li>
 <li>CSS</li>
 <li>C Programming</li>
 <li>Python</li>
 <li>Git & GitHub</li>
+
 </ul>
 
 </section>
-
-<!-- Projects -->
 
 <section id="projects">
 
@@ -161,23 +246,11 @@ My goal is to become a skilled software developer and work in the field of Artif
 
 <div class="project-card">
 
-<img src="3.jpg">
-
-<h3>Amazon Clone</h3>
-
-<p>E-commerce website UI inspired by Amazon.</p>
-
-<a href="#">View Project</a>
-
-</div>
-
-<div class="project-card">
-
 <img src="1.jpg">
 
 <h3>Netflix Clone</h3>
 
-<p>Streaming platform UI using HTML and CSS.</p>
+<p>Streaming platform UI built using HTML and CSS.</p>
 
 <a href="#">View Project</a>
 
@@ -195,27 +268,37 @@ My goal is to become a skilled software developer and work in the field of Artif
 
 </div>
 
+<div class="project-card">
+
+<img src="3.jpg">
+
+<h3>Amazon Clone</h3>
+
+<p>E-commerce website UI inspired by Amazon.</p>
+
+<a href="#">View Project</a>
+
+</div>
+
 </div>
 
 </section>
-
-<!-- Contact -->
 
 <section id="contact">
 
 <h2>Contact</h2>
 
-<p>Email: yourmail@gmail.com</p>
+<p>Email:anandhuabhi112@gmail.com</p>
 
 <p>
+
 <a href="https://github.com/">GitHub</a> |
 <a href="https://linkedin.com/">LinkedIn</a> |
 <a href="https://instagram.com/">Instagram</a>
+
 </p>
 
 </section>
-
-<!-- Footer -->
 
 <footer>
 
@@ -223,5 +306,70 @@ My goal is to become a skilled software developer and work in the field of Artif
 
 </footer>
 
+
+<!-- Typing animation -->
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script>
+
+var typed = new Typed("#typing", {
+
+strings:[
+"BTech Computer Science Student",
+"AI & Machine Learning Enthusiast",
+"Future Software Developer",
+"Web Developer"
+],
+
+typeSpeed:60,
+backSpeed:40,
+loop:true
+
+});
+
+</script>
+
+
+<!-- Particle animation -->
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<script>
+
+particlesJS("particles-js", {
+
+particles:{
+
+number:{value:80},
+
+color:{value:"#00adb5"},
+
+shape:{type:"circle"},
+
+opacity:{value:0.5},
+
+size:{value:3},
+
+line_linked:{
+enable:true,
+distance:150,
+color:"#00adb5",
+opacity:0.4,
+width:1
+},
+
+move:{
+enable:true,
+speed:3
+}
+
+}
+
+});
+
+</script>
+
 </body>
+
 </html>
