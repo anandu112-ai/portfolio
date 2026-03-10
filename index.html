@@ -26,6 +26,8 @@ text-align:center;
 transition:0.4s;
 }
 
+/* dark mode */
+
 .light{
 background:white;
 color:black;
@@ -37,6 +39,15 @@ color:black;
 position:fixed;
 width:100%;
 height:100%;
+top:0;
+left:0;
+z-index:-2;
+}
+
+/* 3D canvas */
+
+#bg{
+position:fixed;
 top:0;
 left:0;
 z-index:-1;
@@ -95,7 +106,7 @@ margin-bottom:30px;
 font-size:32px;
 }
 
-/* glass cards */
+/* glass card */
 
 .card{
 background:rgba(255,255,255,0.1);
@@ -153,14 +164,6 @@ height:150px;
 object-fit:cover;
 }
 
-.project-card h3{
-margin:10px;
-}
-
-.project-card p{
-padding:0 10px;
-}
-
 .project-card a{
 display:inline-block;
 margin:15px;
@@ -177,6 +180,28 @@ border-radius:5px;
 margin:10px;
 }
 
+/* contact form */
+
+form{
+max-width:400px;
+margin:auto;
+}
+
+input,textarea{
+width:100%;
+padding:10px;
+margin:10px 0;
+border-radius:5px;
+border:none;
+}
+
+button{
+padding:10px 20px;
+background:#38bdf8;
+border:none;
+border-radius:5px;
+}
+
 /* resume */
 
 .resume{
@@ -185,7 +210,6 @@ background:#38bdf8;
 color:black;
 text-decoration:none;
 border-radius:8px;
-font-weight:bold;
 }
 
 /* footer */
@@ -203,6 +227,8 @@ background:black;
 <body>
 
 <div id="particles-js"></div>
+
+<canvas id="bg"></canvas>
 
 <nav>
 
@@ -244,8 +270,7 @@ background:black;
 <p>
 
 I am a Computer Science student specializing in AI and Machine Learning.
-I enjoy building web applications, exploring AI technologies and solving
-real world problems using programming.
+I enjoy building web applications and exploring artificial intelligence technologies.
 
 </p>
 
@@ -273,11 +298,6 @@ real world problems using programming.
 <div class="bar"><div class="progress" style="width:75%"></div></div>
 </div>
 
-<div class="skill">
-<p>C Programming</p>
-<div class="bar"><div class="progress" style="width:70%"></div></div>
-</div>
-
 </section>
 
 
@@ -288,39 +308,21 @@ real world problems using programming.
 <div class="projects">
 
 <div class="project-card">
-
 <img src="1.jpg">
-
 <h3>Netflix Clone</h3>
-
-<p>Streaming platform UI built using HTML and CSS</p>
-
 <a href="#">View</a>
-
 </div>
 
 <div class="project-card">
-
 <img src="2.jpg">
-
 <h3>Spotify Clone</h3>
-
-<p>Music player interface design</p>
-
 <a href="#">View</a>
-
 </div>
 
 <div class="project-card">
-
 <img src="3.jpg">
-
 <h3>Amazon Clone</h3>
-
-<p>E-commerce UI inspired by Amazon</p>
-
 <a href="#">View</a>
-
 </div>
 
 </div>
@@ -345,17 +347,19 @@ real world problems using programming.
 
 <section id="contact" data-aos="fade-up">
 
-<h2>Contact</h2>
+<h2>Contact Me</h2>
 
-<p>Email: yourmail@gmail.com</p>
+<form>
 
-<p>
+<input type="text" placeholder="Your Name">
 
-<a href="https://github.com/">GitHub</a> |
-<a href="https://linkedin.com/">LinkedIn</a> |
-<a href="https://instagram.com/">Instagram</a>
+<input type="email" placeholder="Your Email">
 
-</p>
+<textarea placeholder="Message"></textarea>
+
+<button>Send</button>
+
+</form>
 
 </section>
 
@@ -434,13 +438,55 @@ AOS.init();
 <script>
 
 function mode(){
-
 document.body.classList.toggle("light");
-
 }
 
 </script>
 
-</body>
 
+<!-- three js -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+<script>
+
+const scene = new THREE.Scene();
+
+const camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
+
+const renderer = new THREE.WebGLRenderer({
+canvas:document.querySelector('#bg'),
+});
+
+renderer.setSize(window.innerWidth,window.innerHeight);
+
+camera.position.z = 5;
+
+const geometry = new THREE.TorusGeometry(10,3,16,100);
+
+const material = new THREE.MeshBasicMaterial({
+color:0x38bdf8,
+wireframe:true
+});
+
+const torus = new THREE.Mesh(geometry,material);
+
+scene.add(torus);
+
+function animate(){
+
+requestAnimationFrame(animate);
+
+torus.rotation.x +=0.01;
+torus.rotation.y +=0.005;
+
+renderer.render(scene,camera);
+
+}
+
+animate();
+
+</script>
+
+</body>
 </html>
