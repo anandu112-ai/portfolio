@@ -23,10 +23,8 @@ body{
 background:#0f172a;
 color:white;
 text-align:center;
-transition:0.3s;
+transition:0.4s;
 }
-
-/* dark light mode */
 
 .light{
 background:white;
@@ -67,10 +65,10 @@ color:#38bdf8;
 
 .toggle{
 cursor:pointer;
-padding:6px 12px;
 background:#38bdf8;
-border-radius:6px;
 color:black;
+padding:6px 12px;
+border-radius:6px;
 }
 
 /* hero */
@@ -97,7 +95,7 @@ margin-bottom:30px;
 font-size:32px;
 }
 
-/* cards */
+/* glass cards */
 
 .card{
 background:rgba(255,255,255,0.1);
@@ -146,7 +144,7 @@ transition:0.4s;
 }
 
 .project-card:hover{
-transform:translateY(-10px) scale(1.03);
+transform:translateY(-10px) scale(1.05);
 }
 
 .project-card img{
@@ -173,7 +171,13 @@ text-decoration:none;
 border-radius:5px;
 }
 
-/* resume button */
+/* github stats */
+
+.github img{
+margin:10px;
+}
+
+/* resume */
 
 .resume{
 padding:12px 25px;
@@ -206,6 +210,7 @@ background:black;
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
+<a href="#github">GitHub</a>
 <a href="#contact">Contact</a>
 
 <span class="toggle" onclick="mode()">Mode</span>
@@ -239,9 +244,8 @@ background:black;
 <p>
 
 I am a Computer Science student specializing in AI and Machine Learning.
-I enjoy building web applications, learning new technologies and creating
-innovative solutions. My goal is to become a professional AI engineer
-and software developer.
+I enjoy building web applications, exploring AI technologies and solving
+real world problems using programming.
 
 </p>
 
@@ -261,7 +265,7 @@ and software developer.
 
 <div class="skill">
 <p>CSS</p>
-<div class="bar"><div class="progress" style="width:80%"></div></div>
+<div class="bar"><div class="progress" style="width:85%"></div></div>
 </div>
 
 <div class="skill">
@@ -295,7 +299,6 @@ and software developer.
 
 </div>
 
-
 <div class="project-card">
 
 <img src="2.jpg">
@@ -308,18 +311,32 @@ and software developer.
 
 </div>
 
-
 <div class="project-card">
 
 <img src="3.jpg">
 
 <h3>Amazon Clone</h3>
 
-<p>E-commerce website UI inspired by Amazon</p>
+<p>E-commerce UI inspired by Amazon</p>
 
 <a href="#">View</a>
 
 </div>
+
+</div>
+
+</section>
+
+
+<section id="github" data-aos="fade-up">
+
+<h2>GitHub Stats</h2>
+
+<div class="github">
+
+<img src="https://github-readme-stats.vercel.app/api?username=anandu112-ai&show_icons=true&theme=tokyonight">
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=anandu112-ai&theme=tokyonight">
 
 </div>
 
@@ -335,9 +352,7 @@ and software developer.
 <p>
 
 <a href="https://github.com/">GitHub</a> |
-
 <a href="https://linkedin.com/">LinkedIn</a> |
-
 <a href="https://instagram.com/">Instagram</a>
 
 </p>
@@ -427,4 +442,5 @@ document.body.classList.toggle("light");
 </script>
 
 </body>
+
 </html>
