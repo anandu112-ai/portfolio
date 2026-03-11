@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Projects</title>
+
+<title>Projects - Anandu G</title>
 
 <style>
 
 body{
-font-family:Arial;
+font-family: Arial, sans-serif;
 margin:0;
-background:#0f172a;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 color:white;
 text-align:center;
 }
+
+/* Navbar */
 
 nav{
 background:black;
@@ -20,18 +23,86 @@ padding:15px;
 
 nav a{
 color:white;
-margin:15px;
+margin:20px;
 text-decoration:none;
+font-size:18px;
 }
 
-section{
-padding:80px 20px;
+nav a:hover{
+color:#00d9ff;
 }
 
-img{
-width:250px;
+/* Project Section */
+
+.projects{
+max-width:1000px;
+margin:auto;
+padding:40px;
+}
+
+.projects h1{
+font-size:40px;
+margin-bottom:40px;
+}
+
+/* Project Cards */
+
+.project-card{
+background:#1e293b;
+padding:25px;
 margin:20px;
 border-radius:10px;
+display:inline-block;
+width:250px;
+transition:0.3s;
+animation:fadeUp 1.5s ease;
+}
+
+.project-card:hover{
+transform:scale(1.08);
+background:#00d9ff;
+color:black;
+}
+
+/* Animation */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.project-card h3{
+margin-bottom:10px;
+}
+
+.project-card p{
+font-size:14px;
+line-height:1.6;
+}
+
+/* Button */
+
+.btn{
+display:inline-block;
+margin-top:10px;
+padding:8px 15px;
+background:black;
+color:white;
+text-decoration:none;
+border-radius:5px;
+font-size:14px;
+}
+
+.btn:hover{
+background:white;
+color:black;
 }
 
 </style>
@@ -41,27 +112,52 @@ border-radius:10px;
 <body>
 
 <nav>
-
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="skills.html">Skills</a>
 <a href="projects.html">Projects</a>
 <a href="contact.html">Contact</a>
-
 </nav>
 
-<section>
+<section class="projects">
 
 <h1>My Projects</h1>
 
-<h3>Netflix Clone</h3>
-<img src="1.jpg">
+<div class="project-card">
+<h3>🌐 Portfolio Website</h3>
+<p>
+A personal portfolio website created using HTML to showcase my skills,
+projects, and journey as a Computer Science student.
+</p>
+<a href="#" class="btn">View Project</a>
+</div>
 
-<h3>Spotify Clone</h3>
-<img src="2.jpg">
+<div class="project-card">
+<h3>🤖 AI Chatbot</h3>
+<p>
+A Python-based chatbot that can respond to user queries using basic
+Natural Language Processing techniques.
+</p>
+<a href="#" class="btn">View Project</a>
+</div>
 
-<h3>Amazon Clone</h3>
-<img src="3.jpg">
+<div class="project-card">
+<h3>🐍 Python Mini Projects</h3>
+<p>
+A collection of small Python programs built while learning programming
+concepts and problem solving.
+</p>
+<a href="#" class="btn">View Project</a>
+</div>
+
+<div class="project-card">
+<h3>🧠 Machine Learning Experiment</h3>
+<p>
+A beginner machine learning project exploring datasets and applying
+basic prediction models.
+</p>
+<a href="#" class="btn">View Project</a>
+</div>
 
 </section>
 
