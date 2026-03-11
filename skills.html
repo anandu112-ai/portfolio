@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Skills</title>
+
+<title>Skills - Anandu G</title>
 
 <style>
 
 body{
-font-family:Arial;
+font-family: Arial, sans-serif;
 margin:0;
-background:#0f172a;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 color:white;
 text-align:center;
 }
+
+/* Navbar */
 
 nav{
 background:black;
@@ -20,17 +23,75 @@ padding:15px;
 
 nav a{
 color:white;
-margin:15px;
+margin:20px;
 text-decoration:none;
+font-size:18px;
 }
 
-section{
-padding:80px 20px;
+nav a:hover{
+color:#00d9ff;
 }
 
-ul{
-list-style:none;
-font-size:20px;
+/* Skills Section */
+
+.skills{
+max-width:800px;
+margin:auto;
+padding:40px;
+}
+
+.skills h1{
+font-size:40px;
+margin-bottom:40px;
+}
+
+/* Skill Bar */
+
+.skill{
+margin:20px 0;
+text-align:left;
+}
+
+.skill p{
+margin-bottom:5px;
+}
+
+.bar{
+background:#333;
+height:12px;
+border-radius:10px;
+overflow:hidden;
+}
+
+.bar span{
+display:block;
+height:100%;
+background:#00d9ff;
+width:0;
+animation:fill 2s forwards;
+}
+
+/* Individual Skill Levels */
+
+.html span{width:85%;}
+.python span{width:75%;}
+.c span{width:70%;}
+.ml span{width:60%;}
+.ai span{width:55%;}
+.git span{width:65%;}
+.problem span{width:80%;}
+
+/* Animation */
+
+@keyframes fill{
+from{width:0;}
+}
+
+/* Hover Effect */
+
+.skill:hover{
+transform:scale(1.05);
+transition:0.3s;
 }
 
 </style>
@@ -40,28 +101,51 @@ font-size:20px;
 <body>
 
 <nav>
-
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="skills.html">Skills</a>
 <a href="projects.html">Projects</a>
 <a href="contact.html">Contact</a>
-
 </nav>
 
-<section>
+<section class="skills">
 
 <h1>My Skills</h1>
 
-<ul>
+<div class="skill html">
+<p>HTML</p>
+<div class="bar"><span></span></div>
+</div>
 
-<li>HTML</li>
-<li>CSS</li>
-<li>Python</li>
-<li>Web Development</li>
-<li>Basic AI & ML</li>
+<div class="skill python">
+<p>Python Programming</p>
+<div class="bar"><span></span></div>
+</div>
 
-</ul>
+<div class="skill c">
+<p>C Programming</p>
+<div class="bar"><span></span></div>
+</div>
+
+<div class="skill ml">
+<p>Machine Learning</p>
+<div class="bar"><span></span></div>
+</div>
+
+<div class="skill ai">
+<p>Artificial Intelligence</p>
+<div class="bar"><span></span></div>
+</div>
+
+<div class="skill git">
+<p>Git & GitHub</p>
+<div class="bar"><span></span></div>
+</div>
+
+<div class="skill problem">
+<p>Problem Solving</p>
+<div class="bar"><span></span></div>
+</div>
 
 </section>
 
