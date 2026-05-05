@@ -4,10 +4,12 @@
 
 <title>Projects - Anandu G</title>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 
 body{
-font-family: Arial, sans-serif;
+font-family: Arial;
 margin:0;
 background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 color:white;
@@ -17,7 +19,8 @@ text-align:center;
 /* Navbar */
 
 nav{
-background:black;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(10px);
 padding:15px;
 }
 
@@ -28,54 +31,43 @@ text-decoration:none;
 font-size:18px;
 }
 
-nav a:hover{
-color:#00d9ff;
-}
+nav a:hover{color:#00d9ff;}
 
-/* Project Section */
+/* Section */
 
 .projects{
-max-width:1000px;
+max-width:1100px;
 margin:auto;
-padding:40px;
+padding:40px 20px;
 }
 
 .projects h1{
-font-size:40px;
-margin-bottom:40px;
+font-size:38px;
+margin-bottom:30px;
 }
 
-/* Project Cards */
+/* Cards */
+
+.project-grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
 
 .project-card{
-background:#1e293b;
-padding:25px;
-margin:20px;
-border-radius:10px;
-display:inline-block;
-width:250px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(12px);
+padding:20px;
+border-radius:15px;
+width:260px;
+box-shadow:0 0 15px rgba(0,0,0,0.4);
 transition:0.3s;
-animation:fadeUp 1.5s ease;
 }
 
 .project-card:hover{
-transform:scale(1.08);
-background:#00d9ff;
-color:black;
-}
-
-/* Animation */
-
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(40px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
+transform:translateY(-10px);
+box-shadow:0 0 25px #00d9ff;
 }
 
 .project-card h3{
@@ -87,22 +79,35 @@ font-size:14px;
 line-height:1.6;
 }
 
-/* Button */
+/* Badges */
+
+.badge{
+display:inline-block;
+background:#00d9ff;
+color:black;
+padding:4px 8px;
+margin:3px;
+border-radius:5px;
+font-size:12px;
+}
+
+/* Buttons */
 
 .btn{
 display:inline-block;
-margin-top:10px;
-padding:8px 15px;
-background:black;
-color:white;
+margin:8px;
+padding:8px 14px;
+background:#00d9ff;
+color:black;
 text-decoration:none;
 border-radius:5px;
 font-size:14px;
+transition:0.3s;
 }
 
 .btn:hover{
 background:white;
-color:black;
+transform:scale(1.05);
 }
 
 </style>
@@ -123,40 +128,71 @@ color:black;
 
 <h1>My Projects</h1>
 
+<div class="project-grid">
+
+<!-- SmartSlot -->
+<div class="project-card">
+<h3>🚗 SmartSlot (AI Parking System)</h3>
+<p>
+AI-based smart parking system with real-time slot detection using computer vision and Firebase. Helps users locate available parking spaces efficiently.
+</p>
+
+<span class="badge">Python</span>
+<span class="badge">OpenCV</span>
+<span class="badge">Firebase</span>
+
+<br>
+
+<a href="#" class="btn"><i class="fab fa-github"></i></a>
+<a href="#" class="btn">Live</a>
+</div>
+
+<!-- Firewall -->
+<div class="project-card">
+<h3>🛡️ Firewall Monitoring Tool</h3>
+<p>
+Python-based network monitoring tool to analyze traffic and detect suspicious activities for improved system security.
+</p>
+
+<span class="badge">Python</span>
+<span class="badge">Networking</span>
+
+<br>
+
+<a href="#" class="btn"><i class="fab fa-github"></i></a>
+</div>
+
+<!-- Portfolio -->
 <div class="project-card">
 <h3>🌐 Portfolio Website</h3>
 <p>
-A personal portfolio website created using HTML to showcase my skills,
-projects, and journey as a Computer Science student.
+Modern responsive portfolio website designed using HTML and CSS with smooth UI and structured layout.
 </p>
-<a href="#" class="btn">View Project</a>
+
+<span class="badge">HTML</span>
+<span class="badge">CSS</span>
+
+<br>
+
+<a href="#" class="btn"><i class="fab fa-github"></i></a>
+<a href="#" class="btn">Live</a>
 </div>
 
+<!-- ML Project -->
 <div class="project-card">
-<h3>🤖 AI Chatbot</h3>
+<h3>🧠 ML Prediction Model</h3>
 <p>
-A Python-based chatbot that can respond to user queries using basic
-Natural Language Processing techniques.
+Machine learning model built using Python to analyze datasets and perform predictions using basic algorithms.
 </p>
-<a href="#" class="btn">View Project</a>
+
+<span class="badge">Python</span>
+<span class="badge">ML</span>
+
+<br>
+
+<a href="#" class="btn"><i class="fab fa-github"></i></a>
 </div>
 
-<div class="project-card">
-<h3>🐍 Python Mini Projects</h3>
-<p>
-A collection of small Python programs built while learning programming
-concepts and problem solving.
-</p>
-<a href="#" class="btn">View Project</a>
-</div>
-
-<div class="project-card">
-<h3>🧠 Machine Learning Experiment</h3>
-<p>
-A beginner machine learning project exploring datasets and applying
-basic prediction models.
-</p>
-<a href="#" class="btn">View Project</a>
 </div>
 
 </section>
