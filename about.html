@@ -1,193 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-<title>About - Anandu G</title>
-
-<style>
-
-body{
-font-family: Arial, sans-serif;
-margin:0;
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-color:white;
-text-align:center;
-}
-
-/* Navbar */
-
-nav{
-background:black;
-padding:15px;
-}
-
-nav a{
-color:white;
-margin:20px;
-text-decoration:none;
-font-size:18px;
-}
-
-nav a:hover{
-color:#00d9ff;
-}
-
-/* About Section */
-
-.about{
-max-width:900px;
-margin:auto;
-padding:40px;
-line-height:1.8;
-font-size:18px;
-animation:fadeIn 2s ease;
-}
-
-.about h1{
-font-size:40px;
-color:white;
-margin-bottom:20px;
-}
-
-.about b{
-color:#00d9ff;
-}
-
-/* Fade Animation */
-
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(30px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-/* Journey Timeline */
-
-.journey{
-list-style:none;
-padding:0;
-margin-top:30px;
-}
-
-.journey li{
-background:#1e293b;
-margin:10px auto;
-padding:15px;
-width:60%;
-border-radius:8px;
-transition:0.3s;
-}
-
-.journey li:hover{
-transform:scale(1.05);
-background:#00d9ff;
-color:black;
-}
-
-/* Typing Effect */
-
-.typing{
-color:#00d9ff;
-font-size:22px;
-margin-bottom:20px;
-}
-
-/* Floating Glow */
-
-.about p:hover{
-color:#00d9ff;
-transition:0.3s;
-}
-
-</style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Anandu G</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <nav>
+<div class="container nav-container">
+<div class="logo">Anandu G</div>
+<div class="nav-links">
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="skills.html">Skills</a>
 <a href="projects.html">Projects</a>
 <a href="contact.html">Contact</a>
+</div>
+</div>
 </nav>
 
-<section class="about">
+<section>
+<div class="container">
 
-<h1>About Me</h1>
+<h1>About <span class="highlight">Me</span></h1>
 
-<h3 class="typing"></h3>
-
+<div class="card">
 <p>
-Hello! I'm <b>Anandu G</b>, a passionate Computer Science student specializing in 
-<b>Artificial Intelligence and Machine Learning</b> at 
-<b>Sree Chitra Thirunal College of Engineering</b>.
+Hello! I'm Anandu G, an aspiring AI & ML Engineer passionate about building intelligent systems and modern applications.
 </p>
 
 <p>
-My journey into technology started with curiosity about how websites and 
-software work. That curiosity quickly turned into a passion for building 
-digital solutions and learning modern technologies.
+I enjoy working with Python, Machine Learning, AI systems, and modern web development technologies.
 </p>
 
 <p>
-I enjoy exploring <b>web development, programming, and intelligent systems</b>. 
-Currently I am improving my skills in <b>Python, Web Development, and Machine Learning</b>.
+My goal is to create impactful solutions using Artificial Intelligence and software engineering.
 </p>
+</div>
 
-<p>
-I believe technology has the power to solve real-world problems, and my goal 
-is to become a developer who creates innovative and impactful solutions.
-</p>
-
-<p>
-This portfolio represents my journey, projects, and the skills I am developing 
-as I grow in the world of technology.
-</p>
-
-<h2>My Journey</h2>
-
-<ul class="journey">
-
-<li>🎓 Started BTech in Computer Science (AI & ML)</li>
-
-<li>💻 Learned HTML and CSS and built my first websites</li>
-
-<li>🐍 Started learning Python programming</li>
-
-<li>🧠 Exploring Artificial Intelligence and Machine Learning</li>
-
-<li>🚀 Building projects and improving my development skills</li>
-
-</ul>
-
+</div>
 </section>
 
-<script>
-
-/* Typing Animation */
-
-const text = "AI & ML Student | Web Developer | Future Software Engineer";
-let i = 0;
-
-function typing(){
-if(i < text.length){
-document.querySelector(".typing").innerHTML += text.charAt(i);
-i++;
-setTimeout(typing,70);
-}
-}
-
-typing();
-
-</script>
+<footer>
+<p>© 2026 Anandu G</p>
+</footer>
 
 </body>
 </html>
