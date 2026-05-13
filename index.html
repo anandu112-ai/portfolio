@@ -1,249 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Anandu G | Portfolio</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 
-<style>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-body{
-margin:0;
-font-family: 'Segoe UI', sans-serif;
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-color:white;
-text-align:center;
-}
-
-/* NAV */
-nav{
-background:rgba(0,0,0,0.7);
-backdrop-filter:blur(10px);
-padding:12px;
-position:sticky;
-top:0;
-}
-
-nav a{
-color:white;
-margin:15px;
-text-decoration:none;
-font-weight:600;
-}
-
-nav a:hover{color:#00d9ff;}
-
-/* PROFILE */
-.profile-img{
-width:140px;
-height:140px;
-border-radius:50%;
-border:3px solid #00d9ff;
-margin-top:30px;
-box-shadow:0 0 20px #00d9ff;
-}
-
-.intro{
-max-width:700px;
-margin:auto;
-line-height:1.6;
-padding:10px;
-}
-
-/* BUTTON */
-.btn{
-display:inline-block;
-padding:10px 18px;
-background:#00d9ff;
-color:black;
-border-radius:6px;
-margin:10px;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
-}
-
-.btn:hover{
-background:white;
-transform:scale(1.05);
-}
-
-/* SECTION */
-.section{margin-top:40px;}
-
-/* SKILLS */
-.bar{
-width:250px;
-background:#333;
-height:8px;
-margin:10px auto;
-border-radius:5px;
-overflow:hidden;
-}
-.bar div{
-height:8px;
-background:#00d9ff;
-}
-
-/* PROJECTS */
-.projects{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-padding:10px;
-}
-
-.card{
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(12px);
-padding:20px;
-border-radius:15px;
-width:260px;
-box-shadow:0 0 15px rgba(0,0,0,0.4);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 25px #00d9ff;
-}
-
-.badge{
-display:inline-block;
-background:#00d9ff;
-color:black;
-padding:4px 8px;
-margin:3px;
-border-radius:5px;
-font-size:12px;
-}
-
-/* FOOTER */
-footer{
-margin-top:40px;
-background:black;
-padding:10px;
-}
-
-</style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
 <nav>
+<div class="container nav-container">
+
+<div class="logo">Anandu G</div>
+
+<div class="nav-links">
 <a href="index.html">Home</a>
+<a href="about.html">About</a>
 <a href="skills.html">Skills</a>
 <a href="projects.html">Projects</a>
 <a href="contact.html">Contact</a>
+</div>
+
+</div>
 </nav>
 
-<img src="profile.jpg" class="profile-img">
+<section class="hero">
+<div class="container">
 
-<h1>Anandu G</h1>
-<h3>Aspiring AI/ML Engineer | Python Developer</h3>
+<img src="profile.jpg" alt="Anandu G" class="profile-img">
 
-<div class="intro">
+<h1>Anandu <span class="highlight">G</span></h1>
+
+<div class="typing"></div>
+
 <p>
 Building intelligent systems and real-world applications using AI, Python, and modern web technologies.
 </p>
 
 <a href="resume.pdf" class="btn" target="_blank">Download Resume</a>
-</div>
-
-<!-- SKILLS -->
-<div class="section">
-<h2>Skills</h2>
-
-<p>HTML / CSS</p>
-<div class="bar"><div style="width:85%"></div></div>
-
-<p>Python</p>
-<div class="bar"><div style="width:75%"></div></div>
-
-<p>Machine Learning</p>
-<div class="bar"><div style="width:65%"></div></div>
-</div>
-
-<!-- PROJECTS -->
-<div class="section">
-<h2>Projects</h2>
-
-<div class="projects">
-
-<!-- SmartSlot -->
-<div class="card">
-<h3>SmartSlot (AI Parking)</h3>
-<p>AI-based parking detection system with real-time slot updates using Firebase.</p>
-
-<span class="badge">Python</span>
-<span class="badge">OpenCV</span>
-<span class="badge">Firebase</span>
-
-<br><br>
-
-<a href="https://github.com/YOUR_SMARTSLOT_REPO" class="btn" target="_blank">
-<i class="fab fa-github"></i>
-</a>
-
-<a href="YOUR_APK_LINK" class="btn" target="_blank">APK</a>
-
-<a href="YOUR_VIDEO_LINK" class="btn" target="_blank">Demo</a>
-</div>
-
-<!-- Firewall -->
-<div class="card">
-<h3>Firewall Tool</h3>
-<p>Network monitoring system to detect suspicious traffic.</p>
-
-<span class="badge">Python</span>
-<span class="badge">Networking</span>
-
-<br><br>
-
-<a href="https://github.com/YOUR_FIREWALL_REPO" class="btn" target="_blank">
-<i class="fab fa-github"></i>
-</a>
-</div>
-
-<!-- Portfolio -->
-<div class="card">
-<h3>Portfolio Website</h3>
-<p>Responsive portfolio built using modern UI principles.</p>
-
-<span class="badge">HTML</span>
-<span class="badge">CSS</span>
-
-<br><br>
-
-<a href="https://github.com/YOUR_PORTFOLIO_REPO" class="btn" target="_blank">
-<i class="fab fa-github"></i>
-</a>
-
-<a href="YOUR_PORTFOLIO_LIVE_LINK" class="btn" target="_blank">Live</a>
-</div>
+<a href="projects.html" class="btn">View Projects</a>
 
 </div>
-</div>
-
-<!-- CONTACT -->
-<div class="section">
-<h2>Contact</h2>
-
-<a href="https://github.com/anandu112-ai" class="btn" target="_blank">
-<i class="fab fa-github"></i>
-</a>
-
-<a href="https://www.linkedin.com/in/anandug112" class="btn" target="_blank">
-<i class="fab fa-linkedin"></i>
-</a>
-
-</div>
+</section>
 
 <footer>
-<p>© 2026 Anandu G</p>
+<p>© 2026 Anandu G | AI & ML Portfolio</p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
