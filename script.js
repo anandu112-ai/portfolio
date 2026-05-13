@@ -1,10 +1,8 @@
-// Typing Effect
-
-const text = "Aspiring AI/ML Engineer | Python Developer | Web Developer";
+const text = "AI/ML Engineer & Software Developer";
 
 let i = 0;
 
-function typingEffect(){
+function typing(){
 
 if(i < text.length){
 
@@ -12,37 +10,27 @@ document.querySelector('.typing').textContent += text.charAt(i);
 
 i++;
 
-setTimeout(typingEffect,70);
+setTimeout(typing,70);
 
 }
 
 }
 
-window.onload = typingEffect;
+window.onload = typing;
 
-// Scroll Animation
-
-const cards = document.querySelectorAll('.card');
+const reveals = document.querySelectorAll('.reveal');
 
 window.addEventListener('scroll',()=>{
 
-cards.forEach(card=>{
+reveals.forEach(reveal=>{
 
-const cardTop = card.getBoundingClientRect().top;
+const windowHeight = window.innerHeight;
+const revealTop = reveal.getBoundingClientRect().top;
 
-const triggerBottom = window.innerHeight / 1.2;
-
-if(cardTop < triggerBottom){
-card.style.opacity = '1';
-card.style.transform = 'translateY(0px)';
+if(revealTop < windowHeight - 100){
+reveal.classList.add('active');
 }
 
 });
 
-});
-
-cards.forEach(card=>{
-card.style.opacity = '0';
-card.style.transform = 'translateY(40px)';
-card.style.transition = '0.6s';
 });
