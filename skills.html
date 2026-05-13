@@ -1,153 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-<title>Skills - Anandu G</title>
-
-<style>
-
-body{
-font-family: Arial, sans-serif;
-margin:0;
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-color:white;
-text-align:center;
-}
-
-/* Navbar */
-
-nav{
-background:black;
-padding:15px;
-}
-
-nav a{
-color:white;
-margin:20px;
-text-decoration:none;
-font-size:18px;
-}
-
-nav a:hover{
-color:#00d9ff;
-}
-
-/* Skills Section */
-
-.skills{
-max-width:800px;
-margin:auto;
-padding:40px;
-}
-
-.skills h1{
-font-size:40px;
-margin-bottom:40px;
-}
-
-/* Skill Bar */
-
-.skill{
-margin:20px 0;
-text-align:left;
-}
-
-.skill p{
-margin-bottom:5px;
-}
-
-.bar{
-background:#333;
-height:12px;
-border-radius:10px;
-overflow:hidden;
-}
-
-.bar span{
-display:block;
-height:100%;
-background:#00d9ff;
-width:0;
-animation:fill 2s forwards;
-}
-
-/* Individual Skill Levels */
-
-.html span{width:85%;}
-.python span{width:75%;}
-.c span{width:70%;}
-.ml span{width:60%;}
-.ai span{width:55%;}
-.git span{width:65%;}
-.problem span{width:80%;}
-
-/* Animation */
-
-@keyframes fill{
-from{width:0;}
-}
-
-/* Hover Effect */
-
-.skill:hover{
-transform:scale(1.05);
-transition:0.3s;
-}
-
-</style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills | Anandu G</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <nav>
+<div class="container nav-container">
+<div class="logo">Anandu G</div>
+<div class="nav-links">
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="skills.html">Skills</a>
 <a href="projects.html">Projects</a>
 <a href="contact.html">Contact</a>
+</div>
+</div>
 </nav>
 
-<section class="skills">
+<section>
+<div class="container">
 
-<h1>My Skills</h1>
+<h1>My <span class="highlight">Skills</span></h1>
 
-<div class="skill html">
-<p>HTML</p>
-<div class="bar"><span></span></div>
+<div class="skill">
+<div class="skill-title">
+<p>HTML & CSS</p>
+<p>85%</p>
+</div>
+<div class="progress">
+<span style="width:85%"></span>
+</div>
 </div>
 
-<div class="skill python">
-<p>Python Programming</p>
-<div class="bar"><span></span></div>
+<div class="skill">
+<div class="skill-title">
+<p>Python</p>
+<p>75%</p>
+</div>
+<div class="progress">
+<span style="width:75%"></span>
+</div>
 </div>
 
-<div class="skill c">
-<p>C Programming</p>
-<div class="bar"><span></span></div>
-</div>
-
-<div class="skill ml">
+<div class="skill">
+<div class="skill-title">
 <p>Machine Learning</p>
-<div class="bar"><span></span></div>
+<p>65%</p>
+</div>
+<div class="progress">
+<span style="width:65%"></span>
+</div>
 </div>
 
-<div class="skill ai">
-<p>Artificial Intelligence</p>
-<div class="bar"><span></span></div>
 </div>
-
-<div class="skill git">
-<p>Git & GitHub</p>
-<div class="bar"><span></span></div>
-</div>
-
-<div class="skill problem">
-<p>Problem Solving</p>
-<div class="bar"><span></span></div>
-</div>
-
 </section>
+
+<footer>
+<p>© 2026 Anandu G</p>
+</footer>
 
 </body>
 </html>
